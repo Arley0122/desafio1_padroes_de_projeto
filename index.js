@@ -2,10 +2,10 @@ const containerTodosMonstros = document.querySelector(".container_todos_monstros
 const player = document.querySelector(".container_player")
 const botaoAtacar = document.querySelector(".causar_dano") 
 const botaoReceberDano = document.querySelector(".receber_dano")
-const audioMonstroDano = new Audio("/audio_monstros/audio_dano.mp3")
-const audioMonstroMorte = new Audio("/audio_monstros/audio_morte.mp3")
-const audioPlayerDano = new Audio("/audio_player/player_dano.mp3")
-const audioPlayerMorte = new Audio("/audio_player/audio_morte.mp3")
+const audioMonstroDano = new Audio("audio_monstros/audio_dano.mp3")
+const audioMonstroMorte = new Audio("audio_monstros/audio_morte.mp3")
+const audioPlayerDano = new Audio("audio_player/player_dano.mp3")
+const audioPlayerMorte = new Audio("audio_player/audio_morte.mp3")
 let fabrica = new FabricaMonstros()
 
 let monstro1 = fabrica.criarMonstro(60, 10)
@@ -63,7 +63,7 @@ containerTodosMonstros.addEventListener("click", (e)=>{
                 monstro1.levarDano(Player.instance().atacar())
                 audioMonstroDano.play()
                 img.src = "imagens/monstro1/monstro1_triste.png"
-                setTimeout(()=> { if(monstro1.life > 0) img.src = "/imagens/monstro1/monstro1.png" }, 1200)
+                setTimeout(()=> { if(monstro1.life > 0) img.src = "imagens/monstro1/monstro1.png" }, 1200)
                 if(monstro1.life <= 0){
                     img.src = "imagens/monstro1/monstro1_morto.png"
                     audioMonstroMorte.play()
@@ -71,7 +71,7 @@ containerTodosMonstros.addEventListener("click", (e)=>{
                     setTimeout(()=> {
                         monstro1.life = 60;
                         document.querySelector(".life_monstro1").style.width = `${monstro1.life}%`
-                        img.src = "/imagens/monstro1/monstro1.png";
+                        img.src = "imagens/monstro1/monstro1.png";
                         monstro1.vivo = true;
                     }, 4000)
                 }
