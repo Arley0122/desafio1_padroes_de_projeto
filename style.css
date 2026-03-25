@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #67bed9;
+}
+.container_monster, .container_player{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow:  0 2px 16px black;
+    height: 400px;
+    min-width: 0px;   
+    padding: 4px; 
+    background-color: #2596be;
+    outline: 1px solid black;
+}
+
+.container_todos_monstros{
+    margin: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+img{
+    height: 250px;
+    border-radius: 5px;
+}
+button{
+    height: 40px;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 10px ;
+}
+button:hover{
+    opacity: 80%;
+    outline: 1px solid black;
+}
+.life{
+    outline: solid 1px black;
+    border-radius: 2px;
+    margin: auto;
+    height: 10px;
+    width: 90%;
+    background-color: greenyellow;
+}
+
+.container_player{
+    margin: auto;
+    width: 250px;
+}
